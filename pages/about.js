@@ -1,4 +1,5 @@
 import Head from 'next/head' 
+import Script from 'next/script'
 
 export default function AboutPage() {
     return (
@@ -7,7 +8,10 @@ export default function AboutPage() {
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_ID}`}
         strategy="afterInteractive"
       />
-      <Script id="google-analytics-script" strategy="afterInteractive">
+      
+            <Head>
+                <title>About Page</title>
+                <Script id="google-analytics-script" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
@@ -16,8 +20,6 @@ export default function AboutPage() {
           gtag('config', '${process.env.GOOGLE_ANALYTICS_ID}');  
         `}
       </Script>
-            <Head>
-                <title>About Page</title>
             </Head>
             
             <h1>About Page</h1>
