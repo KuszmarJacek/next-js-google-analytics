@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  enc: {
+  env: {
     GOOGLE_ANALYTICS_ID: 'G-6CNRL91E6G'
   }
 }
