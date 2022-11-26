@@ -3,9 +3,7 @@ import Head from 'next/head'
 export default function AboutPage() {
     return (
         <div>
-            <Head>
-                <title>About Page</title>
-                <Script 
+            <Script 
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_ID}`}
         strategy="afterInteractive"
       />
@@ -18,7 +16,10 @@ export default function AboutPage() {
           gtag('config', '${process.env.GOOGLE_ANALYTICS_ID}');  
         `}
       </Script>
+            <Head>
+                <title>About Page</title>
             </Head>
+            
             <h1>About Page</h1>
         </div>
     )
