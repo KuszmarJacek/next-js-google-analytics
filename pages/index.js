@@ -12,6 +12,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Script>
+      {`
+      gtag('event', 'screen_view', {
+        'app_name': 'losingMyFuckingMind',
+        'screen_name': 'Home'
+      });
+      `}
+      </Script>
+
       <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
