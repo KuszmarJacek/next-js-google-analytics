@@ -20,14 +20,19 @@ function MyApp({ Component, pageProps }) {
   }, [router.events])
   return(
     <>
-      <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_MEASUREMENT_ID}`} strategy='afterInteractive' />
-      <Script id="google-analytics" strategy='lazyOnload'>
+      <Script src={`https://www.googletagmanager.com/gtag/js?id=G-ZQJ51F0VLQ`} strategy='afterInteractive' />
+      <Script id="google-analytics" strategy='beforeInteractive'>
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', '${process.env.NEXT_PUBLIC_MEASUREMENT_ID}');
+          gtag('config', 'G-ZQJ51F0VLQ');
+          gtag('event', 'page_view', {
+            page_title: 'My Profile',
+            page_location: 'https://example.com/me',
+            send_to: 'G-ZBYEF8FR2X'
+          });
         `}
       </Script>
       <Component {...pageProps} />
