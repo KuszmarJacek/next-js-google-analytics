@@ -13,7 +13,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Script>
+      <Script
+      id="visitngHome"
+      strategy="lazyOnload">
       {`
       gtag('event', 'screen_view', {
         'app_name': 'losingMyFuckingMind',

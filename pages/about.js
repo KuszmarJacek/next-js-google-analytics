@@ -7,7 +7,9 @@ export default function AboutPage() {
             <Head>
                 <title>About Page</title>
             </Head>
-            <Script>
+            <Script 
+              id="visitngAbout"
+              strategy="lazyOnload">
             {`
             gtag('event', 'screen_view', {
               'app_name': 'losingMyFuckingMind',
