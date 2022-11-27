@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }) {
   return(
     <>
       <Script src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_MEASUREMENT_ID}`} strategy='afterInteractive' />
-      <Script id="google-analytics" strategy='afterInteractive'>
+      <Script id="google-analytics" strategy='lazyOnload'>
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
