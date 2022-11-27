@@ -12,9 +12,9 @@ export default function Home() {
       strategy="lazyOnload">
       {`
       gtag('event', 'screen_view', {
-        app_name: 'losingMyFuckingMind',
-        screen_name: 'Home',
-        send_to: '${process.env.NEXT_PUBLIC_MEASUREMENT_ID}'
+        'app_name': 'losingMyFuckingMind',
+        'screen_name': 'Home',
+        'send_to': '${process.env.NEXT_PUBLIC_MEASUREMENT_ID}'
       });
       `}
       </Script>
